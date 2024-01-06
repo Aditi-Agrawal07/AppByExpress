@@ -1,22 +1,36 @@
 // Import packages
 const express = require("express")
 const morgan = require("morgan")
-// const session = require('express-session')
-// const MongoStore = require('connect-mongo')
+
+// Swagger 
+const swaggerJsDoc = require("swagger-jsdoc")
+const swaggerUi = require("swagger-ui")
 const passport = require("passport")
-// require('dotenv').config()
 
-// const elastic = require("elasticsearch")
+const options = {
+    definations: {
+        openapi :' 3.0.0',
+        info: {
+            title: "Job Portal Api",
+            version: '1.0.0'
+        },
+        servers: {
+            api : 'https://job-portal-dy0q.onrender.com',
+            local_api: 'http://localhost:8000/'
+        }
+    },
+    apis: ['./app.js']
+}
 
-// const elasticClient =  new elastic.Client({
-//     hosts:"localhost:9200"
-// })
+const swaggerSpec = swaggerJsDoc(options)
+
 
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'))
+
 
 
 // Mongo session setup 
@@ -46,7 +60,7 @@ const { userRouter,jobRouter,studentRouter  } = require("./Routes")
 
 
 
-
+app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 app.use("/user", userRouter)
 app.use("/jobs", jobRouter)
 app.use("/student",studentRouter)
