@@ -14,11 +14,16 @@ const options = {
             title: "Job Portal Api",
             version: '1.0.0'
         },
-        servers: {
+        servers:[
+           { 
             url : 'https://job-portal-dy0q.onrender.com',
-            url: 'http://localhost:8000/'
+            description: 'Remote server' 
+        },
+            {
+                url: 'http://localhost:8000/',
+                description: 'Local server' 
         }
-    },
+    ],
     apis: ['./app.js']
 }
 
