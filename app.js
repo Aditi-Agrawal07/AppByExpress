@@ -9,7 +9,7 @@ const passport = require("passport")
 
 const options = {
     definition: {
-        openapi :' 3.1.0',
+      
         info: {
             title: "Job Portal Api",
             version: '1.0.0'
