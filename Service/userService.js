@@ -1,5 +1,5 @@
 // Import model
-const { teardownCrashReporter } = require('next/dist/build/swc');
+
 const { User, Student, Recruiter, Teacher } = require('../Models')
 const mongoose = require("mongoose")
 
