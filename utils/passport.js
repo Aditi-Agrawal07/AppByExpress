@@ -1,6 +1,6 @@
 const passport = require('passport');
 const crypto = require('./crypto.utils')
-require('dotenv').config()
+
 
 const { Student, Recruiter, Teacher } = require('../Models');
 
@@ -92,7 +92,7 @@ passport.use('local', new LocalStratergy({
 
 const options =  {
   jwtFromRequest : ExtractJWT.fromAuthHeaderAsBearerToken(),
-  secretOrKey: process.env.JWT_SECRET,
+  secretOrKey: "rrjrjfkjfoeruyiuriri23",
 
 
 }
