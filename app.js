@@ -4,11 +4,11 @@ const morgan = require("morgan")
 
 // Swagger 
 const swaggerJsDoc = require("swagger-jsdoc")
-const swaggerUi = require("swagger-ui")
+const swaggerUi = require("swagger-ui-express")
 const passport = require("passport")
 
 const options = {
-    definations: {
+    definition: {
         openapi :' 3.0.0',
         info: {
             title: "Job Portal Api",
