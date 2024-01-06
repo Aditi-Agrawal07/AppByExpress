@@ -4,13 +4,13 @@ const morgan = require("morgan")
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const passport = require("passport")
-require('dotenv').config()
+// require('dotenv').config()
 
-const elastic = require("elasticsearch")
+// const elastic = require("elasticsearch")
 
-const elasticClient =  new elastic.Client({
-    hosts:"localhost:9200"
-})
+// const elasticClient =  new elastic.Client({
+//     hosts:"localhost:9200"
+// })
 
 const app = express()
 
@@ -32,8 +32,8 @@ app.use(morgan('dev'))
 //         maxAge:1000 *60 * 60 * 24
 //     }
 // }))
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
 // Import Utilities
 const  { database } = require("./utils") 
