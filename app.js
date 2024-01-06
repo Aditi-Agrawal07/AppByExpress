@@ -19,7 +19,7 @@ const options = {
            { url: 'http://localhost:8000/', description: 'Local server'}
     ],
 },
-    apis: ['./app.js']
+    apis: ['./Routes/*.js']
 
 }
 
