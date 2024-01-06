@@ -1,7 +1,6 @@
-require("dotenv").config()
 const passport = require('passport');
 const crypto = require('./crypto.utils')
-
+require('dotenv').config
 const { Student, Recruiter, Teacher } = require('../Models');
 
 // local stratergy import
