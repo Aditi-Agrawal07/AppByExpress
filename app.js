@@ -5,25 +5,10 @@ const morgan = require("morgan")
 // Swagger 
 const swaggerJsDoc = require("swagger-jsdoc")
 const swaggerUi = require("swagger-ui-express")
+const swaggerDocument = require('./swagger.json');
 const passport = require("passport")
 
-const options = {
-    definition: {
-      
-        info: {
-            title: "Job Portal Api",
-            version: '1.0.0'
-        },
-        servers:[
-           { url : 'https://job-portal-dy0q.onrender.com',description: 'Remote server'  },
-           { url: 'http://localhost:8000/', description: 'Local server'}
-    ],
-},
-    apis: ['./Routes/*.js']
 
-}
-
-const swaggerSpec = swaggerJsDoc(options)
 
 
 const app = express()
@@ -44,7 +29,7 @@ const { userRouter,jobRouter,studentRouter  } = require("./Routes")
 
 
 
-app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerSpec))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/user", userRouter)
 app.use("/jobs", jobRouter)
 app.use("/student",studentRouter)
