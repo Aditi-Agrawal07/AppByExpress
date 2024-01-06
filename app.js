@@ -18,8 +18,9 @@ const options = {
            { url : 'https://job-portal-dy0q.onrender.com',description: 'Remote server'  },
            { url: 'http://localhost:8000/', description: 'Local server'}
     ],
+},
     apis: ['./app.js']
-}
+
 }
 
 const swaggerSpec = swaggerJsDoc(options)
