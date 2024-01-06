@@ -15,16 +15,11 @@ const options = {
             version: '1.0.0'
         },
         servers:[
-           { 
-            url : 'https://job-portal-dy0q.onrender.com',
-            description: 'Remote server' 
-        },
-            {
-                url: 'http://localhost:8000/',
-                description: 'Local server' 
-        }
+           { url : 'https://job-portal-dy0q.onrender.com',description: 'Remote server'  },
+           { url: 'http://localhost:8000/', description: 'Local server'}
     ],
     apis: ['./app.js']
+}
 }
 
 const swaggerSpec = swaggerJsDoc(options)
