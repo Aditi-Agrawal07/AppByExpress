@@ -1,8 +1,8 @@
 // Import packages
 const express = require("express")
 const morgan = require("morgan")
-const session = require('express-session')
-const MongoStore = require('connect-mongo')
+// const session = require('express-session')
+// const MongoStore = require('connect-mongo')
 const passport = require("passport")
 // require('dotenv').config()
 
