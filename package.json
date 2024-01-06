@@ -29,5 +29,8 @@
     "winston-logstash": "^1.2.1",
     "winston-transport": "^4.6.0",
     "winston-transport-logstash": "^0.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
