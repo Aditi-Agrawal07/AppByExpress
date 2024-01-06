@@ -15,8 +15,8 @@ const options = {
             version: '1.0.0'
         },
         servers: {
-            api : 'https://job-portal-dy0q.onrender.com',
-            local_api: 'http://localhost:8000/'
+            url : 'https://job-portal-dy0q.onrender.com',
+            url: 'http://localhost:8000/'
         }
     },
     apis: ['./app.js']
