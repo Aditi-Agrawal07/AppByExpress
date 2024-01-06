@@ -20,18 +20,18 @@ app.use(morgan('dev'))
 
 
 // Mongo session setup 
-app.use(session({
-    secret:process.env.JWT_SECRET,
-    resave: false,
-    saveUninitialized:true,
-    store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI,
-        collection: session
-    }),
-    cookie: { 
-        maxAge:1000 *60 * 60 * 24
-    }
-}))
+// app.use(session({
+//     secret:process.env.JWT_SECRET,
+//     resave: false,
+//     saveUninitialized:true,
+//     store: MongoStore.create({
+//         mongoUrl: process.env.MONGODB_URI,
+//         collection: session
+//     }),
+//     cookie: { 
+//         maxAge:1000 *60 * 60 * 24
+//     }
+// }))
 app.use(passport.initialize())
 app.use(passport.session())
 
