@@ -28,8 +28,9 @@ database.mongooseConnection();
 const { userRouter,jobRouter,studentRouter  } = require("./Routes")
 
 
+require('./swagger-setup')(app);
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.use("/user", userRouter)
 app.use("/jobs", jobRouter)
 app.use("/student",studentRouter)

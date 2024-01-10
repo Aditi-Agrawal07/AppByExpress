@@ -10,7 +10,7 @@ const { multer, protectRoutes } = require("../Middleware")
 const passport = require('passport')
 
 router.use(passport.initialize())
-router.use(passport.session())
+
 
 
 // ROUTES: SignUp
